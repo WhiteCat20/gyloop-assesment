@@ -11,30 +11,44 @@ const App = () => {
     } = theme.useToken();
     return (
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed}>
-                <img className='logo' src='/img/Logo.png' alt='logo-gyloop' />
+            <Sider trigger={null} collapsible collapsed={collapsed} className='slider-left'>
+                <div className='top-sider-left' >
+                    <img className='logo' src='/img/Logo.png' alt='logo-gyloop' />
+                    {React.createElement(
+                            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+                            {
+                                className: 'trigger',
+                                onClick: () => setCollapsed(!collapsed),
+                            }
+                        )}
+                </div>        
                 <Menu
                     mode='inline'
                     defaultSelectedKeys={['1']}
                     items={[
                         {
                             key: '1',
+                            icon:<UploadOutlined/>,
                             label: 'Home',
                         },
                         {
                             key: '2',
+                            icon:<UploadOutlined/>,
                             label: 'Inbox',
                         },
                         {
                             key: '3',
+                            icon:<UploadOutlined/>,
                             label: 'Calender',
                         },
                         {
                             key: '4',
+                            icon:<UploadOutlined/>,
                             label: 'More',
                         },
                         {
                             key: '5',
+                            icon:<UploadOutlined/>,
                             label: 'Customer',
                             children: [
                                 {
@@ -216,10 +230,12 @@ const App = () => {
                         },
                         {
                             key: '6',
+                            icon:<UploadOutlined/>,
                             label: 'Suppliers',
                         },
                         {
                             key: '7',
+                            icon:<UploadOutlined/>,
                             label: 'Warehouse',
                         },
                     ]}
@@ -232,13 +248,15 @@ const App = () => {
                         background: colorBgContainer,
                     }}
                 >
-                    {React.createElement(
-                        collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-                        {
-                            className: 'trigger',
-                            onClick: () => setCollapsed(!collapsed),
-                        }
-                    )}
+                    <div><h3>Home</h3></div>
+                    <div>
+                        <ul style={{display:'flex'}}>
+                            <li><a href='#'>Dashboard</a></li>
+                            <li><a href='#'>Task</a></li>
+                            <li><a href='#'>Insight</a></li>
+                        </ul>
+                    </div>
+                    
                 </Header>
                 <Content
                     style={{
@@ -251,7 +269,9 @@ const App = () => {
                     Content
                 </Content>
             </Layout>
-            <Sider></Sider>
+            <Sider className='sider-right'>
+
+            </Sider>
         </Layout>
     );
 };
