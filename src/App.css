@@ -16,13 +16,13 @@
     background: transparant;
 }
 
-h3 {
-    font-size: 60px;
-}
-
 :where(.css-dev-only-do-not-override-1km3mtt).ant-layout .ant-layout-sider {
     position: relative;
     min-width: 0;
     background: white;
     transition: all 0.2s;
 }
+
+
+
+
