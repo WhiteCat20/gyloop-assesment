@@ -1,8 +1,17 @@
-import { MenuFoldOutlined, MenuUnfoldOutlined, UploadOutlined, UserOutlined, VideoCameraOutlined} from '@ant-design/icons';
+import {
+    MenuFoldOutlined,
+    MenuUnfoldOutlined,
+    UploadOutlined,
+    UserOutlined,
+    VideoCameraOutlined,
+    HomeOutlined,
+} from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import React, { useState } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const { Header, Sider, Content } = Layout;
+import './assets/all.css';
 
 const App = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -11,44 +20,53 @@ const App = () => {
     } = theme.useToken();
     return (
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed} className='slider-left'>
-                <div className='top-sider-left' >
-                    <img className='logo' src='/img/Logo.png' alt='logo-gyloop' />
-                    {React.createElement(
-                            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-                            {
-                                className: 'trigger',
-                                onClick: () => setCollapsed(!collapsed),
-                            }
-                        )}
-                </div>        
+            <Sider
+                trigger={null}
+                collapsible
+                collapsed={collapsed}
+                className='slider-left'
+            >
+                <div className='top-sider-left'>
+                    {/* <img
+                        className='logo'
+                        src='/img/Logo.png'
+                        alt='logo-gyloop'
+                    /> */}
+                    {/* {React.createElement(
+                        collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+                        {
+                            className: 'trigger',
+                            onClick: () => setCollapsed(!collapsed),
+                        }
+                    )} */}
+                </div>
                 <Menu
                     mode='inline'
                     defaultSelectedKeys={['1']}
                     items={[
                         {
                             key: '1',
-                            icon:<UploadOutlined/>,
+                            icon: <li className='fas fa-home'></li>,
                             label: 'Home',
                         },
                         {
                             key: '2',
-                            icon:<UploadOutlined/>,
+                            icon: <i className='far fa-envelope'></i>,
                             label: 'Inbox',
                         },
                         {
                             key: '3',
-                            icon:<UploadOutlined/>,
-                            label: 'Calender',
+                            icon: <i className='far fa-calendar-alt'></i>,
+                            label: 'Calendar',
                         },
                         {
                             key: '4',
-                            icon:<UploadOutlined/>,
+                            icon: <i className='far fa-envelope'></i>,
                             label: 'More',
                         },
                         {
                             key: '5',
-                            icon:<UploadOutlined/>,
+                            icon: <UploadOutlined />,
                             label: 'Customer',
                             children: [
                                 {
@@ -230,12 +248,12 @@ const App = () => {
                         },
                         {
                             key: '6',
-                            icon:<UploadOutlined/>,
+                            icon: <UploadOutlined />,
                             label: 'Suppliers',
                         },
                         {
                             key: '7',
-                            icon:<UploadOutlined/>,
+                            icon: <UploadOutlined />,
                             label: 'Warehouse',
                         },
                     ]}
@@ -244,19 +262,26 @@ const App = () => {
             <Layout className='site-layout'>
                 <Header
                     style={{
-                        padding: 0,
+                        padding: 10,
                         background: colorBgContainer,
                     }}
                 >
-                    <div><h3>Home</h3></div>
                     <div>
-                        <ul style={{display:'flex'}}>
-                            <li><a href='#'>Dashboard</a></li>
-                            <li><a href='#'>Task</a></li>
-                            <li><a href='#'>Insight</a></li>
+                        <h3>Home</h3>
+                    </div>
+                    <div>
+                        <ul style={{ display: 'flex' }}>
+                            <li>
+                                <a href='#'>Dashboard</a>
+                            </li>
+                            <li>
+                                <a href='#'>Task</a>
+                            </li>
+                            <li>
+                                <a href='#'>Insight</a>
+                            </li>
                         </ul>
                     </div>
-                    
                 </Header>
                 <Content
                     style={{
@@ -269,9 +294,7 @@ const App = () => {
                     Content
                 </Content>
             </Layout>
-            <Sider className='sider-right'>
-
-            </Sider>
+            <Sider className='sider-right'></Sider>
         </Layout>
     );
 };
