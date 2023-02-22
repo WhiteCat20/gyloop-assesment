@@ -9,8 +9,8 @@ import {
 import { Layout, Menu, theme } from 'antd';
 import React, { useState } from 'react';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const { Header, Sider, Content } = Layout;
+import { Header } from './components/Header';
+const { Sider, Content } = Layout;
 import './assets/all.css';
 
 const App = () => {
@@ -260,29 +260,7 @@ const App = () => {
                 />
             </Sider>
             <Layout className='site-layout'>
-                <Header
-                    style={{
-                        padding: 10,
-                        background: colorBgContainer,
-                    }}
-                >
-                    <div>
-                        <h3>Home</h3>
-                    </div>
-                    <div>
-                        <ul style={{ display: 'flex' }}>
-                            <li>
-                                <a href='#'>Dashboard</a>
-                            </li>
-                            <li>
-                                <a href='#'>Task</a>
-                            </li>
-                            <li>
-                                <a href='#'>Insight</a>
-                            </li>
-                        </ul>
-                    </div>
-                </Header>
+                <Header />
                 <Content
                     style={{
                         margin: '24px 16px',
@@ -291,7 +269,13 @@ const App = () => {
                         background: colorBgContainer,
                     }}
                 >
-                    Content
+                    <div
+                        style={{
+                            backgroundColor: 'red',
+                            width: '100px',
+                            height: '100px',
+                        }}
+                    />
                 </Content>
             </Layout>
             <Sider className='sider-right'></Sider>
