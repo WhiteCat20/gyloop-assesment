@@ -183,11 +183,6 @@ h3 {
     /* background-color: #EDF0F8; */
 }
 
-.ed-wrapper {
-    display: flex;
-    align-items: center;
-}
-
 /* Change the opacity of the drop down menu links on hover, do whatever styling you want. */
 .dropdown-content a:hover {
     opacity: .6;

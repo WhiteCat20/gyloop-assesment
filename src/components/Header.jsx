@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Layout, Menu, theme } from 'antd';
 import moment from 'moment';
+import { EntitiyData } from './EntitiyData';
 
 export const Header = () => {
     const items = [
@@ -100,19 +101,24 @@ export const Header = () => {
                                         <div
                                             className='ed-wrapper'
                                             style={{
-                                                backgroundColor: 'red',
                                                 height: '100%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                padding: '10px 10px',
+                                                gap: '11px',
                                             }}
                                         >
                                             <input
-                                                class='form-check-input'
                                                 type='checkbox'
                                                 value=''
                                                 id='flexCheckChecked'
-                                                checked
                                             />
+                                            <div style={{ fontWeight: 600 }}>
+                                                United Tractor, PT
+                                            </div>
                                         </div>
                                     </div>
+                                    <EntitiyData name="Entity Data" />
                                     <div className='ed-selection'>
                                         Product 2
                                     </div>
