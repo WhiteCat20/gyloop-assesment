@@ -12,6 +12,7 @@ import './App.css';
 import { Header } from './components/Header';
 const { Sider, Content } = Layout;
 import './assets/all.css';
+import { ContentsLayout } from './components/ContentsLayout';
 
 const App = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -19,7 +20,7 @@ const App = () => {
         token: { colorBgContainer },
     } = theme.useToken();
     return (
-        <Layout>
+        <Layout style={{ height: '100vh' }}>
             <Sider
                 trigger={null}
                 collapsible
@@ -42,6 +43,7 @@ const App = () => {
                 </div>
 
                 <Menu
+                    style={{ padding: '0 20px' }}
                     mode='inline'
                     defaultSelectedKeys={['1']}
                     items={[
@@ -459,19 +461,12 @@ const App = () => {
                 <Header />
                 <Content
                     style={{
-                        margin: '24px 16px',
-                        padding: 24,
+                        border: '1px solid #0D6AD9',
                         minHeight: 280,
                         background: colorBgContainer,
                     }}
                 >
-                    <div
-                        style={{
-                            backgroundColor: 'red',
-                            width: '100px',
-                            height: '100px',
-                        }}
-                    />
+                    <ContentsLayout />
                 </Content>
             </Layout>
             <aside
