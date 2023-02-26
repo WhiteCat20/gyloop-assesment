@@ -61,7 +61,14 @@ export const Header = () => {
                         className='home-text'
                     >
                         <h3>Home</h3>
-                        <div style={{ display: 'flex', gap: '39px' }}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                gap: '22px',
+                                fontSize: '24px',
+                                alignItems: 'center',
+                            }}
+                        >
                             <i className='fal fa-bell ' id='notification-badge'>
                                 <span class='badge-bell'>5</span>
                             </i>
@@ -97,33 +104,11 @@ export const Header = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='ed-selection'>
-                                        <div
-                                            className='ed-wrapper'
-                                            style={{
-                                                height: '100%',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                padding: '10px 10px',
-                                                gap: '11px',
-                                            }}
-                                        >
-                                            <input
-                                                type='checkbox'
-                                                value=''
-                                                id='flexCheckChecked'
-                                            />
-                                            <div style={{ fontWeight: 600 }}>
-                                                United Tractor, PT
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <EntitiyData name="Entity Data" />
-                                    <div className='ed-selection'>
-                                        Product 2
-                                    </div>
-                                    <div className='ed-selection'>
-                                        Product 3
+                                    <div id='entity-data-wrapper'>
+                                        <EntitiyData name='United Tractor, PT' />
+                                        <EntitiyData name='Bina Pertiwi, PT' />
+                                        <EntitiyData name='Patria Buana,  PT' />
+                                        <EntitiyData name='Tuah Turangga, PT' />
                                     </div>
                                 </div>
                             </i>

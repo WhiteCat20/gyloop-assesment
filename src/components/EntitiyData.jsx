@@ -11,6 +11,7 @@ export const EntitiyData = ({ name }) => {
                     alignItems: 'center',
                     padding: '10px 10px',
                     gap: '11px',
+                    fontSize: '14px',
                 }}
             >
                 <input type='checkbox' value='' id='flexCheckChecked' />
