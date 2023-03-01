@@ -9,7 +9,7 @@ import {
 import { Layout, Menu, theme } from 'antd';
 import React, { useState } from 'react';
 const { Sider, Content } = Layout;
-// import './assets/all.css';
+
 
 export const SidebarLeft = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -19,20 +19,23 @@ export const SidebarLeft = () => {
             collapsible
             collapsed={collapsed}
             className='slider-left'
+            width={290}
         >
-            <div className='top-sider-left'>
-                <img className='logo' src='/img/Logo.png' alt='logo-gyloop' />
-                {React.createElement(
-                    collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-                    {
-                        className: 'trigger',
-                        onClick: () => setCollapsed(!collapsed),
-                    }
-                )}
+            <div className='top-sider-left' style={{display:'flex'}}>
+                <img className='logo' src='/img/Logo.png' alt='logo-gyloop' style={{width:'150px', paddingLeft:'2rem', paddingTop:'1rem'}}/>
+                <div>
+                    {React.createElement(
+                        collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+                        {
+                            className: 'trigger',
+                            onClick: () => setCollapsed(!collapsed),
+                        }
+                    )}
+                </div>
             </div>
 
             <Menu
-                style={{ padding: '0 20px' }}
+                style={{ padding: '0 20px', marginTop:'2rem' }}
                 mode='inline'
                 defaultSelectedKeys={['1']}
                 items={[
@@ -91,7 +94,7 @@ export const SidebarLeft = () => {
                             ></i>
                         ),
                         label: 'Customer',
-                        children: [
+                        children:[
                             {
                                 label: 'Master Data ',
                                 icon: <i className='fas fa-box'></i>,

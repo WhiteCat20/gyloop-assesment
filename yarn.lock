@@ -1782,10 +1782,10 @@
   "resolved" "https://registry.npmjs.org/value-equal/-/value-equal-1.0.1.tgz"
   "version" "1.0.1"
 
-"vite@^4.1.0", "vite@^4.1.0-beta.0":
-  "integrity" "sha512-YoUKE/9bbK4C8ZeSYMDDEF8H5aypmWUq4WisftDhntR1gkI2zt2SGT/5Wd2xu6ZoVXkCyO3U4844KWG9e4nFoQ=="
-  "resolved" "https://registry.npmjs.org/vite/-/vite-4.1.0.tgz"
-  "version" "4.1.0"
+"vite@^4.1.0-beta.0", "vite@^4.1.4":
+  "integrity" "sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg=="
+  "resolved" "https://registry.npmjs.org/vite/-/vite-4.1.4.tgz"
+  "version" "4.1.4"
   dependencies:
     "esbuild" "^0.16.14"
     "postcss" "^8.4.21"

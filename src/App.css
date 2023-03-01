@@ -66,6 +66,7 @@ h3 {
 
 :where(.css-dev-only-do-not-override-1km3mtt).ant-layout .ant-layout-sider {
     position: relative;
+    width: 290px;
     min-width: 0;
     background: white;
     transition: all 0.2s;
