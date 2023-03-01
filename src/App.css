@@ -1,3 +1,38 @@
+@font-face {
+    font-family: 'ProductSans';
+    src: url('../src/fonts/Product\ Sans\ Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('../src/fonts/Product\ Sans\ Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('../src/fonts/Product\ Sans\ Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('../src/fonts/Product\ Sans\ Bold\ Italic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFCompact';
+    src: url('../src/fonts/SF-Compact-Text-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
 .trigger {
     padding: 0 24px;
     font-size: 18px;
@@ -16,6 +51,19 @@
     background: transparant;
 }
 
+h3 {
+    font-size: 60px;
+}
+
+.home-text {
+    font-family: 'ProductSans', sans-serif;
+}
+
+.ul-text>li {
+    font-family: 'ProductSans', sans-serif;
+    font-size: 16px;
+}
+
 :where(.css-dev-only-do-not-override-1km3mtt).ant-layout .ant-layout-sider {
     position: relative;
     min-width: 0;
@@ -23,6 +71,128 @@
     transition: all 0.2s;
 }
 
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-horizontal .ant-menu-item,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-horizontal .ant-menu-submenu {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    padding-right: 10px;
+}
 
+.active-nav {
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+    /* background-color: red; */
+}
 
+.active-nav:hover {
+    color: white;
+}
 
+/* header notification */
+#notification-badge {
+    position: relative;
+}
+
+.badge-bell {
+    position: absolute;
+    top: -5px;
+    left: 14px;
+    background-color: #F14169;
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 50%;
+}
+
+.badge-envelope {
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background-color: #F14169;
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 50%;
+}
+
+.badge-city {
+    position: absolute;
+    top: -5px;
+    left: 14px;
+    background-color: #F14169;
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 50%;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropbtn {
+    /* font-size: 1em; */
+    border: none;
+    outline: none;
+    /* color: blue; */
+    /*makes the dropdown link blue*/
+    /* padding: 1em; */
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    /*Hides the content*/
+    font-family: 'ProductSans', sans-serif;
+    position: absolute;
+    top: 30px;
+    left: -141px;
+    background-color: #fff;
+    min-width: 208px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5); */
+    /*Adds a drop shadow*/
+    z-index: 1;
+    /* border-radius: 2%; */
+    border: 1px solid #0D6AD9;
+}
+
+.dropdown-content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 75%;
+    margin-left: -15px;
+    margin-top: -9px;
+    width: 0;
+    z-index: 1;
+    height: 0;
+    border-bottom: solid 9px #FFF;
+    border-left: solid 13px transparent;
+    border-right: solid 15px transparent;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content .ed-selection {
+    float: none;
+    color: #333;
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    /* background-color: red */
+}
+
+#entity-data-wrapper .ed-selection:nth-child(odd) {
+    background-color: #EDF0F8;
+}
+
+/* Change the opacity of the drop down menu links on hover, do whatever styling you want. */
+.dropdown-content a:hover {
+    opacity: .6;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropbtn:hover .dropdown-content {
+    display: block;
+}
