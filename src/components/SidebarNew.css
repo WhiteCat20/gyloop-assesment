@@ -1,0 +1,37 @@
+.sidebar{
+    font-family: 'Product Sans', sans-serif;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-left: 12px;
+    color: #5D5D5D;
+}
+
+.nav-item .nav-subitem{
+    width: 100%;
+}
+
+.nav-link > .nav-icon{
+    font-size: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.contain-pills{
+    display: flex;
+}
+
+.right{
+    position: absolute;
+    right: 23.5px;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.nav-item-divider{
+    color: '#8CB1DE';
+}

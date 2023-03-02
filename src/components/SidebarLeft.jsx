@@ -10,7 +10,6 @@ import { Layout, Menu, theme } from 'antd';
 import React, { useState } from 'react';
 const { Sider, Content } = Layout;
 
-
 export const SidebarLeft = () => {
     const [collapsed, setCollapsed] = useState(false);
     return (
@@ -21,8 +20,17 @@ export const SidebarLeft = () => {
             className='slider-left'
             width={290}
         >
-            <div className='top-sider-left' style={{display:'flex'}}>
-                <img className='logo' src='/img/Logo.png' alt='logo-gyloop' style={{width:'150px', paddingLeft:'2rem', paddingTop:'1rem'}}/>
+            <div className='top-sider-left' style={{ display: 'flex' }}>
+                <img
+                    className='logo'
+                    src='/img/Logo.png'
+                    alt='logo-gyloop'
+                    style={{
+                        width: '150px',
+                        paddingLeft: '2rem',
+                        paddingTop: '1rem',
+                    }}
+                />
                 <div>
                     {React.createElement(
                         collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
@@ -35,7 +43,7 @@ export const SidebarLeft = () => {
             </div>
 
             <Menu
-                style={{ padding: '0 20px', marginTop:'2rem' }}
+                style={{ padding: '0 20px', marginTop: '2rem' }}
                 mode='inline'
                 defaultSelectedKeys={['1']}
                 items={[
@@ -94,7 +102,7 @@ export const SidebarLeft = () => {
                             ></i>
                         ),
                         label: 'Customer',
-                        children:[
+                        children: [
                             {
                                 label: 'Master Data ',
                                 icon: <i className='fas fa-box'></i>,

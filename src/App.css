@@ -59,7 +59,7 @@ h3 {
     font-family: 'ProductSans', sans-serif;
 }
 
-.ul-text>li {
+.ul-text > li {
     font-family: 'ProductSans', sans-serif;
     font-size: 16px;
 }
@@ -72,12 +72,27 @@ h3 {
     transition: all 0.2s;
 }
 
-:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-horizontal .ant-menu-item,
-:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-horizontal .ant-menu-submenu {
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-horizontal
+    .ant-menu-item,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-horizontal
+    .ant-menu-submenu {
     position: relative;
     display: inline-block;
     vertical-align: bottom;
     padding-right: 10px;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-light .ant-menu-item-selected{
+    background-color: white;
+}
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline{
+    background-color: white;
+}
+
+.nav-pills .nav-link.active{
+    color: #0D6AD9;
+    background-color: transparent;
+    font-weight: 700;
 }
 
 .active-nav {
@@ -99,7 +114,7 @@ h3 {
     position: absolute;
     top: -5px;
     left: 14px;
-    background-color: #F14169;
+    background-color: #f14169;
     color: white;
     font-size: 12px;
     padding: 2px 4px;
@@ -110,7 +125,7 @@ h3 {
     position: absolute;
     top: -5px;
     right: -6px;
-    background-color: #F14169;
+    background-color: #f14169;
     color: white;
     font-size: 12px;
     padding: 2px 4px;
@@ -121,7 +136,7 @@ h3 {
     position: absolute;
     top: -5px;
     left: 14px;
-    background-color: #F14169;
+    background-color: #f14169;
     color: white;
     font-size: 12px;
     padding: 2px 4px;
@@ -154,7 +169,7 @@ h3 {
     /*Adds a drop shadow*/
     z-index: 1;
     /* border-radius: 2%; */
-    border: 1px solid #0D6AD9;
+    border: 1px solid #0d6ad9;
 }
 
 .dropdown-content:after {
@@ -167,7 +182,7 @@ h3 {
     width: 0;
     z-index: 1;
     height: 0;
-    border-bottom: solid 9px #FFF;
+    border-bottom: solid 9px #fff;
     border-left: solid 13px transparent;
     border-right: solid 15px transparent;
 }
@@ -185,12 +200,12 @@ h3 {
 }
 
 #entity-data-wrapper .ed-selection:nth-child(odd) {
-    background-color: #EDF0F8;
+    background-color: #edf0f8;
 }
 
 /* Change the opacity of the drop down menu links on hover, do whatever styling you want. */
 .dropdown-content a:hover {
-    opacity: .6;
+    opacity: 0.6;
 }
 
 /* Show the dropdown menu when the user moves the mouse over the dropdown button */

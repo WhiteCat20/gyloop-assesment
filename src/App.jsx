@@ -15,16 +15,16 @@ import './assets/all.css';
 import { ContentsLayout } from './components/ContentsLayout';
 import { SidebarLeft } from './components/SidebarLeft';
 import { SidebarRight } from './components/SidebarRight';
+import { SidebarNew } from './components/SidebarNew';
 
 const App = () => {
-   
     const {
         token: { colorBgContainer },
     } = theme.useToken();
     return (
         <Layout style={{ height: '100vh' }}>
-            <SidebarLeft/>
-            <Layout className='site-layout' style={{display:'flex'}}>
+            <SidebarNew />
+            <Layout className='site-layout' style={{ display: 'flex' }}>
                 <Header />
                 <Content
                     style={{
@@ -36,7 +36,7 @@ const App = () => {
                     <ContentsLayout />
                 </Content>
             </Layout>
-            <SidebarRight/>
+            <SidebarRight />
         </Layout>
     );
 };
